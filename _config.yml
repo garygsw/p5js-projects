@@ -18,22 +18,32 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: a portfolio for p5.js projects
+title: p5.js projects
 email: garygsw@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  My collection of projects using p5.js.
 baseurl: "/p5js-projects/" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username: garygsw
+linkedin_username: garygsw  # your LinkedIn user name
+scholar_userid: SuI63bsAAAAJ  # your Google Scholar ID
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 theme: minima
 plugins:
+  - jekyll-email-protect
+  - jekyll-github-metadata
   - jekyll-feed
+  - jekyll-paginate-v2
+  - jekyll/scholar
+  - jekyll-twitter-plugin
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-target-blank
+  - jemoji
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -43,14 +53,13 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+
+include: ["_pages"]
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+
+
