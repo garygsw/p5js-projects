@@ -72,6 +72,6 @@ exclude:
 
 # Library versions
 p5:
-  version: "1.9.0"
+  version: "1.6.0"
 flexbox:
   version: "6.3.1"
